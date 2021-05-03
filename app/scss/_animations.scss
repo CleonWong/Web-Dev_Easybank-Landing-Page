@@ -1,0 +1,38 @@
+// Any keyframe animations go here.
+@keyframes overlay-fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0%;
+  }
+  to {
+    visibility: visible;
+    opacity: 100%;
+  }
+}
+
+.overlay-fade-in {
+  animation: overlay-fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes overlay-fade-out {
+  from {
+    visibility: visible;
+    opacity: 100%;
+  }
+  99% {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0%;
+  }
+}
+
+.overlay-fade-out {
+  animation: overlay-fade-out 200ms ease-in-out forwards;
+}

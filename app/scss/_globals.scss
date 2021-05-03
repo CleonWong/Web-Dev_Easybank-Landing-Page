@@ -1,0 +1,183 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+// To inherit that html {box-sizing: border-box} to all elements.
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  font-size: $font-medium;
+  font-weight: 300;
+  line-height: 1.3;
+  color: $grayishBlue;
+  overflow-x: hidden; // To remove the horizontal scrollbar in the browser window after we increased the width of the hero image.
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+// ==========
+
+// Text
+// ----
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  color: $darkBlue;
+  line-height: 1.15;
+  margin-top: 0px;
+} // Usually add space between elements by adding marging to the bottonm.
+
+h1 {
+  font-size: 2.3125rem;
+  font-weight: 300;
+  font-size: 2.3125rem;
+  color: $darkBlue;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+
+  @include breakpoint-up(large) {
+    font-size: $font-xlarge;
+  }
+}
+
+h2 {
+  // For mobile
+  font-size: 1.875rem;
+  margin-bottom: 1.1625rem;
+  // For desktop
+  @include breakpoint-up(large) {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+h3 {
+  // For mobile
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+
+  @include breakpoint-up(large) {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+p {
+  line-height: 1.5rem;
+  margin-bottom: 2.25rem;
+  font-size: $font-small;
+
+  @include breakpoint-up(large) {
+    font-size: $font-medium;
+  }
+}
+
+// ==========
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+// Container for padding and margins
+.container {
+  max-width: 69.375rem;
+  margin: auto;
+
+  &--paddingAll {
+    padding-top: 4.375rem;
+    padding-right: 1.5rem;
+    padding-bottom: 4.375rem;
+    padding-left: 1.5rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  &--paddingX {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  &--paddingY {
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  &--paddingL {
+    padding-left: 1.5rem;
+  }
+  &--paddingR {
+    padding-right: 1.5rem;
+  }
+  &--paddingT {
+    padding-top: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-top: 6rem;
+    }
+  }
+  &--paddingB {
+    padding-bottom: 4.375rem;
+
+    @include breakpoint-up(large) {
+      padding-bottom: 6rem;
+    }
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// ==========
+
+// Button
+// ------
+button,
+.button {
+  display: inline-block;
+  padding: 0.875rem 2.1875rem;
+  border: 0px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(to right, $limeGreen, $brightCyan);
+  color: $white;
+  font-weight: 400;
+  font-size: $font-small;
+  transition: opacity 200ms ease-in-out;
+
+  &:hover {
+    opacity: 73%;
+  }
+}
+// ==========

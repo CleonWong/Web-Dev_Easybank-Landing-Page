@@ -1,0 +1,79 @@
+.hero {
+  background: $veryLightGray;
+
+  .container {
+    // Display set to flex for screen size large and above.
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    position: relative;
+    background-image: url("/images/bg-intro-mobile.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 17.5rem;
+
+    @include breakpoint-up(medium) {
+      min-height: 25rem;
+      background-position: 50% 66%;
+    }
+
+    @include breakpoint-up(large) {
+      background-image: none;
+      flex: 3;
+      order: 2;
+      height: 41rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 150%;
+        height: 100%;
+        background-image: url("/images/bg-intro-desktop.svg");
+        background-size: 123%;
+        background-repeat: no-repeat;
+        background-position: 20% 76%;
+      }
+    }
+
+    &::after {
+      content: "";
+      height: 106%;
+      width: 100%;
+      position: absolute;
+      background-image: url(/images/image-mockups.png);
+      background-size: 91%;
+      background-repeat: no-repeat;
+      background-position: 50% 95%;
+
+      @include breakpoint-up(medium) {
+        background-size: 70%;
+        background-position: 50% 99%;
+      }
+      @include breakpoint-up(large) {
+        content: "";
+        height: 125%;
+        // border: 1px solid magenta;
+        width: 150%;
+        position: absolute;
+        background-size: 73%;
+        background-repeat: no-repeat;
+        background-position: 69% 117%;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      flex: 2;
+      order: 1;
+      text-align: left;
+    }
+  }
+}
