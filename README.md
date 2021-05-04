@@ -2,6 +2,8 @@
 
 This is front-end development project aimed to build a modern-looking product landing page using **HTML**, **SCSS** and **JavaScript**.
 
+![Screenshot 1](https://github.com/CleonWong/Web-Dev_Easybank-Landing-Page/blob/main/design/desktop-preview.jpg?raw=true)
+
 ## Live Demo URL
 
 Visit **https://cleonwong.github.io/Web-Dev_Easybank-Landing-Page/** for a live demo of the landing page.
@@ -14,5 +16,4 @@ that I found on [frontendmentor.io](https://www.frontendmentor.io). In this
 challenge, I replicated the following landing page design using **HTML**,
 **SCSS** and **JavaScript**.
 
-![Screenshot 1](https://github.com/CleonWong/Web-Dev_Easybank-Landing-Page/blob/main/design/desktop-preview.jpg?raw=true)
 ![Screenshot 2](https://github.com/CleonWong/Web-Dev_Easybank-Landing-Page/blob/main/design/active-states.jpg?raw=true)
